@@ -4,14 +4,17 @@ import About from "@/views/About.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/home/:id",
     name: "Home",
-    component: () =>import("@/views/Home.vue"),
+    component: () => import("@/views/Home.vue"),
+    props: true 
   },
+  
   {
-    path: "/about",
+    path: "/about/:id",
     name: "About",
     component: About,
+    props: true
   },
 ];
 
